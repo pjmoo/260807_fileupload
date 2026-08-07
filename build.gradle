@@ -19,6 +19,10 @@ repositories {
 }
 
 dependencies {
+    // S3
+    // Source: https://mvnrepository.com/artifact/software.amazon.awssdk/s3
+    implementation 'software.amazon.awssdk:s3:2.47.5'
+    // ---
     implementation 'org.springframework.boot:spring-boot-h2console'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
