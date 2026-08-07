@@ -10,6 +10,7 @@ public class MainController {
     @GetMapping("/")
     public String index() {
 //        return "index";
-        return "redirect:/files/new";
+//        return "redirect:/files/new";
+        return "redirect:/profiles";
     }
 }
