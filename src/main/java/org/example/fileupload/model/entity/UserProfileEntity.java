@@ -17,4 +17,8 @@ public class UserProfileEntity extends BaseEntity {
     private String name;
     private String originalFileName;
     private String storedFileName;
+
+    public String url() {
+        return "/upload/%s".formatted(storedFileName);
+    }
 }

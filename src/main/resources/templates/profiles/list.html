@@ -26,6 +26,7 @@
 <section>
     <div th:each="profile : ${list}">
         <p th:text="${profile.name}"></p>
+        <img th:src="${profile.url()}" width="240">
     </div>
 </section>
 </body>
