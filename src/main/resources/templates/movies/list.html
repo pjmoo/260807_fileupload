@@ -24,6 +24,7 @@
 <section>
     <div th:each="movie : ${list}">
         <p th:text="${movie.title}"></p>
+        <!--        <img th:each="image : ${movie.images}" th:src="${imagePath + '/' + image.url()}" width="240">-->
         <img th:each="image : ${movie.images}" th:src="${image.url()}" width="240">
     </div>
 </section>

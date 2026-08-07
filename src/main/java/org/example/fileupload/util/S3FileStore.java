@@ -48,6 +48,7 @@ public class S3FileStore implements FileStore {
         PutObjectRequest request = PutObjectRequest.builder()
                 .bucket(storageProperty.bucket())
                 .key(key)
+                .contentType(image.getContentType())
                 .build();
 
         try (InputStream inputStream = image.getInputStream()) {

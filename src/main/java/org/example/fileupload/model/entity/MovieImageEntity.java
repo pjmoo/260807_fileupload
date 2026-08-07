@@ -16,6 +16,7 @@ public class MovieImageEntity extends BaseEntity {
 
     public String url() {
         return "/upload/%s".formatted(storedFileName);
+//        return storedFileName;
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
