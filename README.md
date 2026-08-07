@@ -75,24 +75,10 @@ spring:
       max-request-size: 50MB   # 전체 요청 최대 용량
 ```
 
-### 2. 로컬 환경 변수 셋업 (`.env.dev`)
-데이터베이스와 Supabase S3 연결 정보를 위해 프로젝트 루트 경로에 `.env.dev` 파일을 생성하여 다음과 같은 변수를 설정합니다.
-
-```env
-# Supabase DB Connection
-DB_HOST=aws-0-ap-northeast-2.pooler.supabase.com
-DB_PORT=5432
-DB_NAME=postgres
-DB_USERNAME=postgres.YOUR_USERNAME
-DB_PASSWORD=YOUR_PASSWORD
-
-# Supabase S3 Storage Connection
-SUPABASE_S3_BUCKET=movies
-SUPABASE_S3_ENDPOINT=https://YOUR_PROJECT_ID.storage.supabase.co/storage/v1/s3
-SUPABASE_S3_REGION=ap-northeast-2
-SUPABASE_S3_ACCESS_KEY=YOUR_ACCESS_KEY
-SUPABASE_S3_SECRET_KEY=YOUR_SECRET_KEY
-```
+### 2. 로컬 환경 변수 셋업
+데이터베이스와 Supabase S3 연결 정보는 보안을 위해 로컬 파일인 `.env.dev` 파일에 설정해야 합니다. 
+상세한 변수 키 목록은 프로젝트 루트에 위치한 `.env.dev.example` 파일을 참조하여 설정해 주세요.
+* **주의**: `.env.dev` 파일은 보안상 절대로 Git 저장소에 커밋되어선 안 됩니다. (이미 `.gitignore`에 등록되어 있습니다.)
 
 ---
 
