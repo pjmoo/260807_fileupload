@@ -13,6 +13,7 @@
         <form
                 th:method="post"
                 th:action="@{/files/new}"
+                enctype="multipart/form-data"
         >
             <input type="file" name="image" accept="image/*">
             <button>업로드</button>
