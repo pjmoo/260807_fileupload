@@ -15,7 +15,7 @@ import java.util.UUID;
 @Component
 public class LocalFileStore implements FileStore {
     private final Path uploadPath = Path.of("src/main/resources/static/upload");
-    private static final Set<String> ALLOWED_EXTENSIONS = Set.of("jpg", "jpeg");
+    private static final Set<String> ALLOWED_EXTENSIONS = Set.of("jpg", "jpeg", "png", "gif", "webp");
 
     public UploadFile storeFile(MultipartFile image) {
         // 1. 비어 있는지 검증

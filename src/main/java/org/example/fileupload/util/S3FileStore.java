@@ -24,7 +24,7 @@ public class S3FileStore implements FileStore {
     private final S3Client s3Client;
     private final StorageProperty storageProperty;
 
-    private static final Set<String> ALLOWED_EXTENSIONS = Set.of("jpg", "jpeg");
+    private static final Set<String> ALLOWED_EXTENSIONS = Set.of("jpg", "jpeg", "png", "gif", "webp");
 
     @Override
     public UploadFile storeFile(MultipartFile image) {
