@@ -11,6 +11,7 @@ public class MainController {
     public String index() {
 //        return "index";
 //        return "redirect:/files/new";
-        return "redirect:/profiles";
+//        return "redirect:/profiles";
+        return "redirect:/movies";
     }
 }
