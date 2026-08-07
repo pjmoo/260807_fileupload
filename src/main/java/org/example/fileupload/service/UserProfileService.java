@@ -9,6 +9,8 @@ import org.example.fileupload.util.FileStore;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 @Transactional(readOnly = true)
@@ -25,5 +27,9 @@ public class UserProfileService {
                 .storedFileName(uploadFile.storedName())
                 .build();
         userProfileJpaRepository.save(userProfileEntity);
+    }
+
+    public List<UserProfileEntity> findAll() {
+        return userProfileJpaRepository.findAll();
     }
 }

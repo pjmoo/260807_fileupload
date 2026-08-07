@@ -14,11 +14,19 @@
             th:method="post"
             th:action="@{/profiles}"
             enctype="multipart/form-data"
+            th:object="${form}"
     >
-        <label>유저명 : <input name="name"></label><br>
-        <label>프로필 이미지 : <input type="file" name="image" accept="image/*"></label><br>
+        <!--        <label>유저명 : <input name="name"></label><br>-->
+        <!--        <label>프로필 이미지 : <input type="file" name="image" accept="image/*"></label><br>-->
+        <label>유저명 : <input th:field="*{name}"></label><br>
+        <label>프로필 이미지 : <input type="file" th:field="*{image}" accept="image/*"></label><br>
         <button>등록</button>
     </form>
+</section>
+<section>
+    <div th:each="profile : ${list}">
+        <p th:text="${profile.name}"></p>
+    </div>
 </section>
 </body>
 </html>
