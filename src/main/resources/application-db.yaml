@@ -1,0 +1,10 @@
+# H2로 우선 datasource 알아서 처리하게
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
