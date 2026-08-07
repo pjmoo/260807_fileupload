@@ -10,6 +10,7 @@
 <body>
     <h1>테라박스</h1>
     <section>
+        <p th:if="${msg}" th:text="${msg}"></p>
         <form
                 th:method="post"
                 th:action="@{/files/new}"
