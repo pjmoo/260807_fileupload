@@ -8,17 +8,21 @@
     <title>테라박스</title>
 </head>
 <body>
-    <h1>테라박스</h1>
-    <section>
-        <p th:if="${msg}" th:text="${msg}"></p>
-        <form
-                th:method="post"
-                th:action="@{/files/new}"
-                enctype="multipart/form-data"
-        >
-            <input type="file" name="image" accept="image/*">
-            <button>업로드</button>
-        </form>
-    </section>
+<h1>테라박스</h1>
+<section>
+    <!--    <p th:if="${msg}" th:text="${msg}"></p>-->
+    <p th:if="${result}" th:text="${result.originalName()} + '가 업로드 되었습니다'"></p>
+    <img th:if="${result}" th:src="${result.url()}" width="240">
+
+    <form
+            th:method="post"
+            th:action="@{/files/new}"
+            enctype="multipart/form-data"
+    >
+        <!--            <input type="file" name="image" accept="image/jpeg">-->
+        <input type="file" name="image" accept="image/*">
+        <button>업로드</button>
+    </form>
+</section>
 </body>
 </html>
